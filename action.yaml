@@ -1,0 +1,38 @@
+name: 'flyte-register'
+description: 'register a flyte workflow'
+inputs:
+  project:  # id of input
+    description: 'project to register to'
+    required: true
+  config:  # id of input
+    description: 'config for the project'
+    required: true
+  domain:  # id of input
+    description: 'domain to register to'
+    required: true
+  package:  # id of input
+    description: 'archaive to register'
+    required: true
+  version:  # id of input
+    description: 'version of the workflow'
+    required: true
+  clientId:  # id of input
+    description: 'clientid for the flyte admin'
+    required: true
+  secretPath:  # id of input
+    description: 'var to secret path'
+    required: true
+outputs:
+  outputs: # id of output
+    description: 'outputs'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.config }}
+    - ${{ inputs.project }}
+    - ${{ inputs.domain }}
+    - ${{ inputs.package }}
+    - ${{ inputs.version }}
+    - ${{ inputs.clientId }}
+    - ${{ inputs.secretPath }}
