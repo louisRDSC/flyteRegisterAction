@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
+mkdir /secret
+touch /secret/secret
 echo $7 > /secret/secret
 
 flytectl -c $1 \ 
