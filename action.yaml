@@ -19,8 +19,8 @@ inputs:
   clientId:  # id of input
     description: 'clientid for the flyte admin'
     required: true
-  secretPath:  # id of input
-    description: 'var to secret path'
+  ClientSecret:  # id of input
+    description: 'secret'
     required: true
 outputs:
   outputs: # id of output
@@ -35,4 +35,4 @@ runs:
     - ${{ inputs.package }}
     - ${{ inputs.version }}
     - ${{ inputs.clientId }}
-    - ${{ inputs.secretPath }}
+    - ${{ inputs.clientSecret }}
