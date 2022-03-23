@@ -19,7 +19,7 @@ inputs:
   clientId:  # id of input
     description: 'clientid for the flyte admin'
     required: true
-  ClientSecret:  # id of input
+  clientSecret:  # id of input
     description: 'secret'
     required: true
 outputs:
